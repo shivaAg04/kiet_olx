@@ -1,7 +1,7 @@
-import 'dart:html';
+// import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'dart:html';
+import 'package:kiet_olx/screens/category_screen.dart';
 
 class CategoriesButton extends StatelessWidget {
   Color? chooseColor;
@@ -16,21 +16,30 @@ class CategoriesButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          height: 40,
-          width: 40,
-          color: chooseColor,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: ((context) => CategoryScreen())));
+      },
+      child: Container(
+        height: 100,
+        width: 100,
+        color: Color.fromARGB(255, 255, 255, 255),
+        child: Column(
+          children: [
+            CircleAvatar(
+              maxRadius: 35,
+              child: chooseIcon,
+              backgroundColor: chooseColor,
+            ),
+            Spacer(),
+            Text(
+              chooseText!,
+              softWrap: true,
+            ),
+          ],
         ),
-        CircleAvatar(
-          child: chooseIcon,
-        ),
-        Align(
-          alignment: Alignment.bottomCenter,
-          child: Text(chooseText!),
-        )
-      ],
+      ),
     );
   }
 }

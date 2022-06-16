@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:kiet_olx/screens/home_screen.dart';
-import 'package:kiet_olx/screens/on_boarding_page.dart';
 
 void main() {
   runApp(const MyApp());
