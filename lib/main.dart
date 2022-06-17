@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kiet_olx/screens/bottom_navigation_bar.dart';
 
 import 'package:kiet_olx/screens/home_screen.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: CustomiseBottomNavigationBar(),
     );
   }
 }

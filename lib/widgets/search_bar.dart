@@ -11,7 +11,7 @@ class SearchBar extends StatelessWidget {
         height: 50,
         child: Container(
           width: double.infinity,
-          color: Colors.amber,
+          color: Colors.yellow,
           child: const Center(
             child: Text(
               "Search BOx",

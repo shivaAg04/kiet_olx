@@ -12,28 +12,28 @@ class CategooryRow extends StatelessWidget {
       child: Row(
         children: [
           CategoriesButton(
-              chooseColor: const Color.fromARGB(255, 30, 255, 0),
+              chooseColor: Color.fromARGB(255, 0, 255, 213),
               chooseIcon: const Icon(
                 Icons.sports_esports_outlined,
                 color: Color.fromARGB(255, 0, 0, 0),
               ),
               chooseText: "SPORTS"),
           CategoriesButton(
-              chooseColor: const Color.fromARGB(255, 255, 36, 240),
+              chooseColor: Color.fromARGB(255, 255, 0, 234),
               chooseIcon: const Icon(
                 Icons.book,
                 color: Color.fromARGB(255, 0, 0, 0),
               ),
               chooseText: "STATIONARY"),
           CategoriesButton(
-              chooseColor: const Color.fromARGB(255, 0, 242, 255),
+              chooseColor: Color.fromARGB(255, 46, 222, 72),
               chooseIcon: const Icon(
                 Icons.electrical_services_rounded,
                 color: Color.fromARGB(255, 0, 0, 0),
               ),
               chooseText: "ELECTRICAL"),
           CategoriesButton(
-              chooseColor: const Color.fromARGB(255, 212, 255, 57),
+              chooseColor: Color.fromARGB(255, 255, 188, 2),
               chooseIcon: const Icon(
                 Icons.devices_other_sharp,
                 color: Color.fromARGB(255, 0, 0, 0),
