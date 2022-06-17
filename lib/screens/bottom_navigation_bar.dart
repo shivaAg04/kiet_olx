@@ -51,8 +51,8 @@ class _CustomiseBottomNavigationBar
           });
         },
         // animationCurve: Curves.decelerate,
-        buttonBackgroundColor: Colors.yellow,
-        color: Colors.yellow,
+        buttonBackgroundColor: Theme.of(context).primaryColor,
+        color: Theme.of(context).primaryColor,
         backgroundColor: Colors.white,
       ),
     );

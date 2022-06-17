@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:lottie/lottie.dart';
 
 class UserScreen extends StatefulWidget {
   @override
@@ -8,7 +9,7 @@ class UserScreen extends StatefulWidget {
 }
 
 class _UserScreenState extends State<UserScreen> {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
+  // final FirebaseAuth _auth = FirebaseAuth.instance;
 
   navigateToLogin() async {
     Navigator.pushReplacementNamed(context, "Login");
@@ -27,12 +28,15 @@ class _UserScreenState extends State<UserScreen> {
             const SizedBox(height: 35.0),
             Container(
               height: 400,
-              child: const Image(
-                image: NetworkImage(
-                    "https://images.pexels.com/photos/213780/pexels-photo-213780.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
-                fit: BoxFit.contain,
-              ),
+              child: Lottie.network(
+                  "https://assets5.lottiefiles.com/private_files/lf30_1TcivY.json"),
             ),
+//   child: const Image(
+            //     image: NetworkImage(
+            //         "https://images.pexels.com/photos/213780/pexels-photo-213780.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+            //     fit: BoxFit.contain,
+            //   ),
+            // ),
             SizedBox(height: 20),
             RichText(
                 text: const TextSpan(
@@ -43,7 +47,7 @@ class _UserScreenState extends State<UserScreen> {
                         color: Colors.black),
                     children: <TextSpan>[
                   TextSpan(
-                      text: 'X Groceries',
+                      text: 'OLX kiet',
                       style: TextStyle(
                           fontSize: 30.0,
                           fontWeight: FontWeight.bold,
@@ -51,7 +55,7 @@ class _UserScreenState extends State<UserScreen> {
                 ])),
             const SizedBox(height: 10.0),
             const Text(
-              'Fresh Groceries Delivered at your Doorstep',
+              'Sell your unused Product here',
               style: TextStyle(color: Colors.black),
             ),
             const SizedBox(height: 30.0),
