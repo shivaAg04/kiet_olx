@@ -1,6 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:kiet_olx/screens/User/after_login.dart';
+import 'package:kiet_olx/screens/User/sign_in.dart';
+import 'package:kiet_olx/screens/User/sign_up.dart';
 import 'package:lottie/lottie.dart';
 
 class UserScreen extends StatefulWidget {
@@ -10,13 +13,31 @@ class UserScreen extends StatefulWidget {
 
 class _UserScreenState extends State<UserScreen> {
   // final FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  checkAuthentication() async {
+    _auth.authStateChanges().listen((user) async {
+      if (user != null) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => AfterLogin()),
+        );
+      }
+    });
+  }
 
   navigateToLogin() async {
-    Navigator.pushReplacementNamed(context, "Login");
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Login()),
+    );
   }
 
   navigateToRegister() async {
-    Navigator.pushReplacementNamed(context, "SignUp");
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => SignUp()),
+    );
   }
 
   @override
@@ -64,7 +85,7 @@ class _UserScreenState extends State<UserScreen> {
               children: <Widget>[
                 RaisedButton(
                     padding: EdgeInsets.only(left: 30, right: 30),
-                    onPressed: () {},
+                    onPressed: navigateToLogin,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),

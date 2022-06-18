@@ -1,8 +1,9 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:kiet_olx/screens/User/after_login.dart';
 import 'package:kiet_olx/screens/ads_screen.dart';
 import 'package:kiet_olx/screens/home_screen.dart';
-import 'package:kiet_olx/screens/user_screen.dart';
+import 'package:kiet_olx/screens/User/user_screen.dart';
 
 class CustomiseBottomNavigationBar extends StatefulWidget {
   const CustomiseBottomNavigationBar({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class _CustomiseBottomNavigationBar
   final List<Widget> _screenWidget = [
     AdsScreen(),
     HomeScreen(),
-    UserScreen(),
+    AfterLogin(),
   ];
   var index = 1;
   @override
