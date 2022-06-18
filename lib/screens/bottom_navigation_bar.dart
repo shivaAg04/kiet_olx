@@ -15,8 +15,8 @@ class CustomiseBottomNavigationBar extends StatefulWidget {
 class _CustomiseBottomNavigationBar
     extends State<CustomiseBottomNavigationBar> {
   final List<Widget> _screenWidget = [
-    AdsScreen(),
-    HomeScreen(),
+    const AdsScreen(),
+    const HomeScreen(),
     UserScreen(),
   ];
   var index = 1;
