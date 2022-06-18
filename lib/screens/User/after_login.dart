@@ -15,7 +15,7 @@ class _AfterLogin extends State<AfterLogin> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   late User user;
   bool isloggedin = false;
-
+// thud
   checkAuthentification() async {
     _auth.authStateChanges().listen((user) {
       if (user == null) {
