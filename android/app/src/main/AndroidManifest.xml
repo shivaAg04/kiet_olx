@@ -1,6 +1,4 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-         
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.kiet_olx">
    <application
         android:label="kiet_olx"
@@ -34,6 +32,3 @@
             android:value="2" />
     </application>
 </manifest>
-
-
-
