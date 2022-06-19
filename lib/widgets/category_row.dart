@@ -12,7 +12,7 @@ class CategooryRow extends StatelessWidget {
       child: Row(
         children: [
           CategoriesButton(
-              chooseColor: Color.fromARGB(255, 0, 255, 213),
+              chooseColor: const Color.fromARGB(255, 0, 255, 213),
               chooseIcon: const Icon(
                 Icons.sports_esports_outlined,
                 color: Color.fromARGB(255, 0, 0, 0),

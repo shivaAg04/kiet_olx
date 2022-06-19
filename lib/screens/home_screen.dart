@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
           Align(
             alignment: Alignment.topLeft,
             child: Text(
-              "   Fresh Recommendations",
+              "   Fresh Recommendationses",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),

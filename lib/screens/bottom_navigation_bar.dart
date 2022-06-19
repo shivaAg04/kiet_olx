@@ -20,6 +20,7 @@ class _CustomiseBottomNavigationBar
     HomeScreen(),
     AfterLogin(),
   ];
+
   var index = 1;
   @override
   Widget build(BuildContext context) {
